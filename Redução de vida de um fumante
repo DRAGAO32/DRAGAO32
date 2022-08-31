@@ -1,0 +1,28 @@
+algoritmo "Redução_de_vida_do_fumante"
+var
+CPD, AF, PVPA, PVND, TAQF : inteiro
+PV : real
+inicio
+      // Nomenclatura:
+      // CPD = Cigarros por dia
+      // AF = Anos fumando
+      // TAQF = Total de anos que fumou
+      // CPA = Cigarros por ano
+      // PVND = Perda de vida no dia
+      // PVPA = Perda de vida por ano
+      // PV = Perda de vida
+      Escreval ("---------------------------------------------------------")
+      Escreval ("Vamos calcular a redução de tempo de vida de um fumante. ")
+      Escreval ("---------------------------------------------------------")
+      
+      Escreva ("Em média, quantos cigarros você fuma por dia? ")
+      leia (CPD)
+      Escreva ("Há quantos anos você fuma? ")
+      leia (AF)
+      
+      TAQF <- AF * 365
+      PVND <- CPD * 10
+      PVPA <- PVND * TAQF
+      PV <- PVPA / 1440
+      
+      Escreval ("Você já perdeu " , PV:1, " dias de vida" )
