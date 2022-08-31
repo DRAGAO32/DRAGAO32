@@ -1,0 +1,52 @@
+algoritmo "Calculadora_de_Area_e_Tinta"
+var
+LE, LD, LC, LB, A, TN, alt, R :real
+inicio
+      Escreval ("--------------------------------------------------------------------------------------")
+      Escreval ("Vamos calcular quantas latas de tinta você precisa para pintar uma determinada parede.")
+      Escreval ("--------------------------------------------------------------------------------------")
+      Escreval ("Digite qual é o rendimento do litro de tinta informado pelo fabrincate: ")
+      leia (R)
+      Escreval ("Informe as medidas, em metros, dos quatro lados da parede: ")
+
+      Escreval ("Lado esquerdo: ")
+      leia (LE)
+      Escreval ("Lado direito: ")
+      leia (LD)
+      Escreval ("Lado de cima: ")
+      leia (LC)
+      Escreval ("Lado de baixo: ")
+      leia (LB)
+      
+      Se (LE = LD) e (LB = LC) e (LE = LB) entao
+
+         A <- LE * LB
+         TN <- A / R
+
+         Escreval ("É uma parede quadrada. ")
+      
+         senao
+              Se (LE = LD) e (LC = LB) e (LE <> LB) entao
+
+                 A <- LE * LB
+                 TN <- A / R
+
+                 Escreval ("É uma parede retangular. ")
+              senao
+                   Se (LE <> LB) e (LB <> LC) e (LE <> LC) entao
+                      Escreva ("Informe a altura da parede: ")
+                      Leia (alt)
+                   
+                      A <- (LB + LC) * alt / 2
+                      TN <- A / R
+
+                      Escreval ("É uma parede trapézio. ")
+                   Fimse
+              Fimse
+      Fimse
+
+      Escreval ("A área da parede é de ", A, "m.2 e a quantidade de litros de tinta será de", TN, "L.")
+      
+      
+      
+fimalgoritmo
